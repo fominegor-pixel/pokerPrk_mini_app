@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<title>PokerPRK — Розіграш</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <header class="topbar">
+    <div class="logo">Poker<span class="gold">PRK</span></div>
+  </header>
+
+  <main id="app" class="container">
+    <div id="loading" class="state-block">
+      <div class="spinner"></div>
+      <p>Завантаження розіграшу…</p>
+    </div>
+
+    <div id="error" class="state-block hidden">
+      <div class="state-icon">⚠️</div>
+      <p id="error-text">Щось пішло не так</p>
+    </div>
+
+    <section id="card" class="giveaway-card hidden">
+      <div class="media-wrap" id="media-wrap"></div>
+
+      <div class="card-body">
+        <div class="status-row">
+          <span id="status-badge" class="badge">—</span>
+          <span id="participants-count" class="participants">👥 0</span>
+        </div>
+
+        <h1 id="giveaway-title" class="title"></h1>
+        <p id="giveaway-description" class="description"></p>
+
+        <div class="timer-row">
+          <div class="timer-block">
+            <span class="timer-label">Початок</span>
+            <span id="start-at" class="timer-value">—</span>
+          </div>
+          <div class="timer-block">
+            <span class="timer-label">Завершення</span>
+            <span id="end-at" class="timer-value">—</span>
+          </div>
+        </div>
+
+        <button id="participate-btn" class="cta-button">
+          <span id="participate-btn-text">Участвовать</span>
+        </button>
+
+        <div id="success-panel" class="success-panel hidden">
+          <div class="success-icon">🎉</div>
+          <p class="success-text">Вітаю вас додано до розіграша</p>
+        </div>
+
+        <div id="winner-panel" class="winner-panel hidden">
+          <div class="success-icon">🏆</div>
+          <p class="success-text">Вітаємо! Ви переможець цього розіграшу!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

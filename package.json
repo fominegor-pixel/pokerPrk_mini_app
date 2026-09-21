@@ -1,0 +1,19 @@
+{
+  "name": "pokerprk-giveaway-miniapp",
+  "version": "1.0.0",
+  "description": "Telegram Mini App для участі в розіграшах PokerPRK. Ділить одну SQLite базу з існуючим Python-ботом bot_prk.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
